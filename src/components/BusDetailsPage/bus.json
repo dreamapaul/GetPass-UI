@@ -1,0 +1,110 @@
+[
+  {
+    "bus_no": "02",
+    "from": "FISAT College",
+    "destination": "Panampilly Nagar(Via vytilla)",
+    "price": 60
+  },
+  {
+    "bus_no": "03",
+    "from": "FISAT College",
+    "destination": "Kumbalam toll-Vytila",
+    "price": 90
+  },
+  {
+    "bus_no": "04",
+    "from": "FISAT College",
+    "destination": "High Court(Via Kaloor)",
+    "price": 120
+  },
+  {
+    "bus_no": "05",
+    "from": "FISAT College",
+    "destination": "Trippunithura(via Irimpanam)",
+    "price": 100
+  },
+  {
+    "bus_no": "06",
+    "from": "FISAT College",
+    "destination": "Koonammavu(via Aluva Paravur JN.)",
+    "price": 80
+  },
+  {
+    "bus_no": "07",
+    "from": "FISAT College",
+    "destination": "Kakkanad",
+    "price": 150
+  },
+  {
+    "bus_no": "08",
+    "from": "FISAT College",
+    "destination": "Mannuthy(via Chalakudy)",
+    "price": 50
+  },
+  {
+    "bus_no": "09",
+    "from": "FISAT College",
+    "destination": "Kottapady(via Neeliswaram)",
+    "price": 140
+  },
+  {
+    "bus_no": "11",
+    "from": "FISAT College",
+    "destination": "Kizhakkambalam(via Aluva)",
+    "price": 110
+  },
+  {
+    "bus_no": "12",
+    "from": "FISAT College",
+    "destination": "Thrissur(via Chalakudy)",
+    "price": 60
+  },
+  {
+    "bus_no": "13",
+    "from": "FISAT College",
+    "destination": "Thoppumpady(via Kaloor)",
+    "price": 110
+  },
+  {
+    "bus_no": "14",
+    "from": "FISAT College",
+    "destination": "Pariyaram(via Chalakudy)",
+    "price": 100
+  },
+  {
+    "bus_no": "15",
+    "from": "FISAT College",
+    "destination": "Njarakkal-N.Paravur(via Aluva)",
+    "price": 80
+  },
+  {
+    "bus_no": "16",
+    "from": "FISAT College",
+    "destination": "Kothamangalam(via Perumbavoor)",
+    "price": 120
+  },
+  {
+    "bus_no": "18",
+    "from": "FISAT College",
+    "destination": "Muppathadom",
+    "price": 150
+  },
+  {
+    "bus_no": "19",
+    "from": "FISAT College",
+    "destination": "Aluva",
+    "price": 130
+  },
+  {
+    "bus_no": "20",
+    "from": "FISAT College",
+    "destination": "Pettah(via Vytilla)",
+    "price": 50
+  },
+  {
+    "bus_no": "21",
+    "from": "FISAT College",
+    "destination": "Irinjalakuda(via Chalakudy)",
+    "price": 140
+  }
+]
