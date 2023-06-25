@@ -1,0 +1,79 @@
+.headerbox{
+   margin: 40px 7%;
+   padding: 0;
+   height: 65px;
+   width: 87%;
+   display: flex;
+   align-items: center;
+   position: relative;
+}  
+.headerbox .header_button{
+    position: absolute;
+    font-size: 15px;
+    top: 20%;
+    width: 14%;
+    left: 82%;
+}
+.headerbox .header_text{
+    position: absolute;
+    font-size: 17px;
+    left: 75%;
+}
+.headerbox .header_image{
+    position: absolute;
+    width: 40%;
+    height: 60%;
+    right: 70% ;
+}
+
+
+.main_body{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.main_body .body_image{
+    position: absolute;
+    left: 45%;
+    margin-top: 35%;
+}
+.main_body .heading_box{
+    position: absolute;
+    margin-left:  11%;
+    width: 100%;
+    justify-content: left;
+    top: 10%;
+}
+.main_body .heading_box .line1{
+    position: absolute;
+    font-size: 80px;
+    line-height: 105%;
+}
+.main_body .heading_box .line2{
+    position: absolute;
+    font-size: 80px;
+    padding-top: 10%;
+}
+.main_body .info{
+    position: absolute;
+    margin-left: 11%;
+    margin-top: 40%;
+    line-height: 26px;
+    width: 100%;
+    justify-content: left;
+    font-size: 17px;
+}
+
+.main_body .body_button{
+    position: absolute;
+    margin:25% 11%;
+    width: 14%;
+    height: 40px;
+}
+.main_body .body_icon{
+    position: absolute;
+    margin-left: 27%;
+    margin-top: 53%;
+    font-size: 190%;
+}
+
