@@ -10,16 +10,16 @@ const BusDetailsPage = () => {
     };
 
     return (
-        <div className="BusDetailspage" style={{ 'overflow-x': 'hidden' }}>
+        <div className="BusDetailspage" style={{ 'overflow-x': 'hidden', 'overflow-y': 'hidden', 'marginBottom': '80px' }}>
             <header className="home-header">
                 <Box bg={'blue.50'} maxW="1242px" maxH="68px" m='32px' marginLeft="140px" borderColor={'blue.100'} borderWidth={'thin'} borderRadius="md" color={'blue.800'}>
                     <Image src='/assets/Getpass logo.svg' position={'relative'} top='13px' left='30px' />
-                    <Text position={'relative'} top="-22px" left="910px" fontSize={'md'} fontWeight='semibold' textColor={'blue.800'}>Bus Details</Text>
+                    <Text position={'relative'} top="-20px" left="185px" fontSize={'md'} fontWeight='semibold' textColor={'blue.800'}> {">  Bus Details"}</Text>
                     <Link to={'/'}>
                         <Button bgColor={'blue.100'} textColor={'blue.500'} rightIcon={<ChevronRightIcon />} position={'relative'} left="1100px" top='-52px' fontWeight='semibold'>Log Out</Button>
                     </Link>
                     <Link to={'/userhomepage'}>
-                        <Button position={'relative'} textColor={'blue.500'} bgColor={'blue.100'} left="900px" top='-52px' fontWeight='semibold'>Back</Button>
+                        <Button position={'relative'} textColor={'blue.500'} bgColor={'blue.50'} left="900px" top='-52px' fontWeight='semibold'>Back</Button>
                     </Link>
                 </Box>
             </header>
