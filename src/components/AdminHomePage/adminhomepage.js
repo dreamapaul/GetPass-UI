@@ -1,4 +1,4 @@
-import {Image,Text,Button,Box,Flex} from '@chakra-ui/react'; 
+import {Image,Text,Button,Box,Flex,Grid} from '@chakra-ui/react'; 
 import {ChevronRightIcon} from '@chakra-ui/icons';
 import { Link } from "react-router-dom";
 import axios from 'axios';   
@@ -35,18 +35,33 @@ import { useState,useEffect} from 'react';
              </header>
              {bills.map((item) => (
                 <Flex bgColor={'blue.50'} height='70px' marginTop='20px' width='1242px' marginLeft='140px' borderColor={'blue.100'} borderWidth={'thin'} borderRadius='6px' > 
-                <Box bgColor={'blue.200'} width='70px' height='36px' marginLeft='-17px' marginTop='17px' textAlign={'center'} borderRadius='6px' lineHeight={'7'} fontSize={'xs'} style={textStyle}>Bus No.</Box>
-                <Box bgColor={'blue.100'} width='80px' height='70px' marginLeft='-22px' textColor={'blue.500'} position={'relative'}  lineHeight='65px' fontWeight={'medium'} fontSize={'5xl'} textAlign={'center'}>{item.bus_no}</Box>
-                <Text position={'relative'} textColor={'gray.400'} left="60px" top='10px' fontSize={'smaller'} fontWeight='normal'>Bill No</Text>
-                <Text position={'relative'} textColor={'blue.700'} left="30px" top='30px' fontSize={'lg'} fontWeight='semibold'>{item.bill_no}</Text>
-                <Text position={'relative'} textColor={'gray.400'} left="180px" top='10px' fontSize={'smaller'} fontWeight='normal'>From</Text>
-                <Text position={'relative'} textColor={'blue.700'} left="150px" top='30px' fontSize={'lg'} fontWeight='semibold'>{item.boarding_point}</Text>
-                <Text position={'relative'} textColor={'gray.400'} left="320px" top='10px' fontSize={'smaller'} fontWeight='normal'>Destination</Text>
-                <Text position={'relative'} textColor={'blue.700'} left="252px" top='30px' fontSize={'lg'} fontWeight='semibold'>{item.destination_point}</Text>
-                <Text position={'relative'} textColor={'gray.400'} left="440px" top='10px' fontSize={'smaller'} fontWeight='normal'>Name</Text>
-                <Text position={'relative'} textColor={'blue.700'} left="403px" top='30px' fontSize={'lg'} fontWeight='semibold'>{item.name}</Text>
-                <Text position={'relative'} textColor={'gray.400'} left="550px" top='10px' fontSize={'smaller'} fontWeight='normal'>No. of tickets</Text>
-                <Text position={'relative'} textColor={'blue.700'} left="482px" top='30px' fontSize={'lg'} fontWeight='semibold'>{item.No_of_tickets}</Text>
+                 <Flex>
+                  <Box bgColor={'blue.200'} width='70px' height='36px' marginLeft='-17px' marginTop='17px' textAlign={'center'} borderRadius='6px' lineHeight={'7'} fontSize={'xs'} style={textStyle}>Bus No.</Box>
+                  <Box bgColor={'blue.100'} width='80px' height='70px' marginLeft='-22px' textColor={'blue.500'} position={'relative'}  lineHeight='65px' fontWeight={'medium'} fontSize={'5xl'} textAlign={'center'}>{item.bus_no}</Box>
+                </Flex>
+
+                <Grid templateColumns='2fr 3fr 3fr 3fr 3fr' gap={6} width='100%' marginLeft='64px'>
+                <div>
+                  <Text position={'relative'} textColor={'gray.400'} top='10px' fontSize={'smaller'} fontWeight='normal'>Bill No</Text>
+                  <Text position={'relative'} textColor={'blue.700'}  top='10px' fontSize={'lg'} fontWeight='semibold'>{item.bill_no}</Text>
+                </div>
+                <div>
+                  <Text position={'relative'} textColor={'gray.400'}  top='10px' fontSize={'smaller'} fontWeight='normal'>From</Text>
+                  <Text position={'relative'} textColor={'blue.700'}  top='10px' fontSize={'lg'} fontWeight='semibold'>{item.boarding_point}</Text>
+                </div>
+                <div>
+                  <Text position={'relative'} textColor={'gray.400'} top='10px' fontSize={'smaller'} fontWeight='normal'>Destination</Text>
+                  <Text position={'relative'} textColor={'blue.700'}  top='10px' fontSize={'lg'} fontWeight='semibold'>{item.destination_point}</Text>
+                </div>
+                <div>
+                  <Text position={'relative'} textColor={'gray.400'}  top='10px' fontSize={'smaller'} fontWeight='normal'>Name</Text>
+                  <Text position={'relative'} textColor={'blue.700'}  top='10px' fontSize={'lg'} fontWeight='semibold'>{item.name}</Text>
+                </div>
+                <div>
+                  <Text position={'relative'} textColor={'gray.400'}  top='10px' fontSize={'smaller'} fontWeight='normal'>No. of tickets</Text>
+                  <Text position={'relative'} textColor={'blue.700'}  top='10px' fontSize={'lg'} fontWeight='semibold'>{item.No_of_tickets}</Text>
+               </div> 
+               </Grid>
             </Flex>
           ))}
             
