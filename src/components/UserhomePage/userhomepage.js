@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 import { useCookies } from 'react-cookie';
 import axios from 'axios';
 
+
 const UserhomePage = () => {
   const [isOuterDrawerOpen, setIsOuterDrawerOpen] = useState(false);
   const [isInnerDrawerOpen, setIsInnerDrawerOpen] = useState(false);
@@ -30,13 +31,15 @@ const UserhomePage = () => {
   const [bus_no, setbusno] = useState('');
   const [price, setPrice] = useState('');
   const [bill_no, setbillno] = useState(100);
+  const [totalPrice, setTotalPrice] = useState(0);
 
   const handleboardingpoint = (e) => {
     setboardingpoint(e.target.value)
   };
   const handledestinationpoint = (e) => {
     setdestinationpoint(e.target.value)
-  };
+  }; 
+  
   const handleprice = (e) => {
     setPrice(e.target.value)
   };
@@ -48,12 +51,12 @@ const UserhomePage = () => {
   const handlenooftickets = (e) => {
     setnooftickets(e.target.value)
   };
-  const handlebillno = () => {
-    setbillno(prevX => prevX + 1)
-  }
 
   const openInnerDrawer = async (e) => {
     setbillno(prevX => prevX + 1)
+
+    setTotalPrice(parseFloat(price) * parseInt(No_of_tickets));
+
     const formData = {
       'boarding_point': boarding_point,
       'destination_point': destination_point,
@@ -62,7 +65,9 @@ const UserhomePage = () => {
       'name': user.name,
       'bill_no': bill_no,
       'price': price
+  
     }
+
     e.preventDefault();
     console.log(JSON.stringify(formData))
     axios.post('http://localhost:8000/bill', formData)
@@ -243,7 +248,7 @@ const UserhomePage = () => {
               <Button borderWidth={'thin'} borderColor={'blue.200'} top='2' textAlign={'start'} width='150px' height='60px' left='-30px' borderRadius={'sm'} bgColor={'blue.100'} leftIcon={<ChevronLeftIcon />} onClick={closeOuterDrawer}>Cancel</Button>
               <Button onClick={openInnerDrawer} width='270px' height='60px' left='-23px' top='2' borderRadius={'sm'} bgColor={'blue.400'} rightIcon={<ChevronRightIcon />}>Proceed</Button>
 
-              <Drawer isOpen={isInnerDrawerOpen} onClose={closeInnerDrawer} onChange={handlebillno} closeOnOverlayClick={false} size={'md'} placement="right">
+              <Drawer isOpen={isInnerDrawerOpen} onClose={closeInnerDrawer} closeOnOverlayClick={false} size={'md'} placement="right">
                 <DrawerOverlay />
                 <DrawerContent>
                   <DrawerCloseButton />
@@ -257,7 +262,7 @@ const UserhomePage = () => {
                     <Text position={'relative'} top='5px' left='20px' textColor={'blue.800'} textAlign={'left'} fontWeight={'bold'} fontSize={'4xl'}>Details</Text>
                     <Box borderRadius={'lg'} bgColor={'gray.100'} marginLeft='25' marginTop='30px' width='400px' height='400px'>
                       <Text position={'relative'} textColor={'blue.700'} fontSize={'md'} fontWeight={'medium'} top='30px' left='40px' >Total Payment</Text>
-                      <Heading position={'relative'} textColor={'blue.900'} left='40px' top='30px' fontSize={'5xl'} fontWeight={'bold'} >Rs {price}</Heading>
+                      <Heading position={'relative'} textColor={'blue.900'} left='40px' top='30px' fontSize={'5xl'} fontWeight={'bold'} >Rs {totalPrice}</Heading>
                       <Text position={'relative'} top='15px' left='15px' fontSize={'4xl'} textColor={'gray.300'}>-------------------------</Text>
                       <Text position={'relative'} top='20px' left='40px' textColor={'blue.800'} fontSize={'md'} letterSpacing={'wide'} fontWeight={'medium'}>Bill Number</Text>
                       <Text position={'relative'} top='40px' left='40px' textColor={'blue.800'} fontSize={'md'} letterSpacing={'wide'} fontWeight={'medium'}>Name</Text>
